@@ -92,6 +92,7 @@ header {
     font-weight: 800;
     font-size: 56px;
     line-height: 72px;
+    margin: 0;
     margin-bottom: 24px;
 }
 
@@ -116,6 +117,7 @@ header {
 }
 
 .person-info > h3 {
+    margin: 0;
     margin-bottom: 24px;
     font-weight: 800;
     font-size: 27px;
@@ -130,6 +132,155 @@ header {
 
 .bio-form {
     height: 750px;
+    padding-top: 56px;
+    padding-left: 64px;
+}
+
+.bio-form > h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 72px;
+}
+
+.input-fields {
+    margin-bottom: 56px;
+    display: grid;
+    grid-template-columns: 304px 304px 304px;
+    row-gap: 40px;
+    column-gap: 32px;
+}
+
+.input-fields > div {
+    margin: 0;
+    padding: 0;
+    height: 83px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-fields > div > label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.input-fields > div > input {
+    height: 56px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #D9BBFF;
+    background: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.bio-form > .file-area {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 976px;
+    height: 104px;
+    background: white;
+    border: 1px dashed #D9BBFF;
+    border-radius: 12px;
+}
+
+.file-area-container > span {
+    margin-right: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9993BD;
+}
+
+.file-area-container > button {
+    background: white;
+    border: 1px solid #8E43ED;
+    color: #8E43ED;
+}
+
+.bio-form  button {
+    width: 211px;
+    height: 56px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.bio-form > .file-container {
+    margin-bottom: 48px;
+    width: 976px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bio-form > .file-container > .file {
+    width: 256px;
+    height: 100%;
+    margin-right: 8px;
+    padding: 8px 24px 8px 12px;
+    background: #FFFFFF;
+    border: 1px solid #D9BBFF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.file > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.file .preview {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.file .info  {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.file .info > .name  {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;    
+    color: #303030;
+}
+
+
+.file .info > .format-and-size {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #AFAFAF;
+}
+
+.file .remove-button {
+    margin: auto 0;
+    width: 10px;
+    height: 12px;
+}
+
+.bio-form > .submit {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bio-form > .submit > button {
+    background: #DED9E4;
+    color: white;
 }
 
 .gallery {
