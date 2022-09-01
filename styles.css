@@ -94,6 +94,7 @@ header {
     line-height: 72px;
     margin: 0;
     margin-bottom: 24px;
+    color: #303030;
 }
 
 .person-info > ul {
@@ -110,6 +111,7 @@ header {
 .info-item {
     list-style: none;
     margin-right: 32px;
+    color: #303030;
 }
 
 .info-item > span {
@@ -122,6 +124,7 @@ header {
     font-weight: 800;
     font-size: 27px;
     line-height: 36px;
+    color: #303030;
 }
 
 .person-info p {
@@ -134,6 +137,8 @@ header {
     height: 750px;
     padding-top: 56px;
     padding-left: 64px;
+    background: url("images/form-background-1.png") no-repeat 0 72px,
+                url("images/form-background-2.png") no-repeat right 47px;
 }
 
 .bio-form > h2 {
@@ -142,6 +147,7 @@ header {
     font-weight: 800;
     font-size: 40px;
     line-height: 72px;
+    color: #303030;
 }
 
 .input-fields {
@@ -165,6 +171,7 @@ header {
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
+    color: #333333;
 }
 
 .input-fields > div > input {
@@ -236,7 +243,9 @@ header {
 
 .file > div {
     display: flex;
+    width: 100%;
     flex-direction: row;
+    align-items: center;
 }
 
 .file .preview {
@@ -267,9 +276,7 @@ header {
 }
 
 .file .remove-button {
-    margin: auto 0;
-    width: 10px;
-    height: 12px;
+    margin-left: auto;
 }
 
 .bio-form > .submit {
@@ -279,8 +286,28 @@ header {
 }
 
 .bio-form > .submit > button {
+    margin-right: 24px;
     background: #DED9E4;
     color: white;
+}
+
+.form-completed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.form-completed > img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.form-completed > span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303030;
 }
 
 .gallery {
