@@ -244,6 +244,24 @@ header {
     color: #8E43ED;
 }
 
+.file-area-container > button:disabled {
+    color: #D9BBFF;
+    background: #FFFFFF;
+    border: 1px solid #D9BBFF;
+}
+
+.file-area-container > button:enabled {
+    background: white;
+}
+
+.file-area-container > button:enabled:hover {
+    background-color: #FAF8FE;
+}
+
+.file-area-container > button:enabled:active {
+    background-color: #F0E5FE;
+}
+
 .bio-form button {
     appearance: none; 
     width: 211px;
@@ -321,8 +339,24 @@ header {
 
 .bio-form > .submit > button {
     margin-right: 24px;
-    background: #DED9E4;
+    background-color: #8E43ED;
     color: white;
+}
+
+.bio-form > .submit > button:disabled {
+    background-color: #DED9E4;
+}
+
+.bio-form > .submit > button:enabled {
+    background-color: #8E43ED;
+}
+
+.bio-form > .submit > button:enabled:hover {
+    background-color: #6813D3;
+}
+
+.bio-form > .submit > button:enabled:active {
+    background-color: #500AA9;
 }
 
 .form-completed {
