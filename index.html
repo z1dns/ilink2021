@@ -44,25 +44,34 @@
                 <h2>Tell us about yourself</h2>
                 <div class="input-fields">
                     <div>
-                        <label>Your name</label>
-                        <input type="text">
+                        <label for="full-name">Your name</label>
+                        <input type="text" id="full-name" name="full-name" required placeholder="Tell us your name">
+                        <span class="error">Error text</span>
                     </div>
                     <div>
-                        <label>Your gender</label>
-                        <input type="text">
+                        <label for="gender">Your gender</label>
+                        <input list="genders" id="gender" name="gender" required placeholder="Choose your gender">
+                        <datalist id="genders">
+                            <option value="Male">
+                            <option value="Female">
+                          </datalist>
+                        <span class="error"></span>
                     </div>
                     <div class="blank"></div>
                     <div>
-                        <label>Your country</label>
-                        <input type="text">
+                        <label for="country">Your country</label>
+                        <input type="text" id="country" name="country" required placeholder="Where are you from">
+                        <span class="error"></span>
                     </div>
                     <div>
-                        <label>Your city</label>
-                        <input type="text">
+                        <label for="city">Your city</label>
+                        <input type="text" id="city" name="city" required placeholder="Your native city">
+                        <span class="error"></span>
                     </div>
                     <div>
-                        <label>Your date of birth</label>
-                        <input type="date">
+                        <label for="date-of-birth">Your date of birth</label>
+                        <input type="date" id="date-of-birth" name="date-of-birth" required placeholder="dd.mm.yyyy">
+                        <span class="error"></span>
                     </div>
                 </div>
                 <div class="file-area">

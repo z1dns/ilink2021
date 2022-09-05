@@ -178,15 +178,44 @@ header {
     color: #333333;
 }
 
-.input-fields > div > input {
+.input-fields > div > input:required {
+    appearance: none;
     height: 56px;
     padding: 16px;
     border-radius: 12px;
+    margin-bottom: 4px;
     border: 1px solid #D9BBFF;
     background: white;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+}
+
+.input-fields > div > input:invalid {
+    background: #FFF5F5;
+    border: 1px solid #ED4376;
+}
+
+.input-fields > div > input:focus {
+    border: 1px solid #8E43ED;
+    outline: none;
+}
+
+.input-fields > div > input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9F9F9F;
+}
+
+.input-fields > div > .error {
+    margin-left: 8px;
+    color: #ED4376;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
 }
 
 .bio-form > .file-area {
@@ -215,7 +244,8 @@ header {
     color: #8E43ED;
 }
 
-.bio-form  button {
+.bio-form button {
+    appearance: none; 
     width: 211px;
     height: 56px;
     border-radius: 12px;
