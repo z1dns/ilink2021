@@ -230,12 +230,20 @@ header {
     border-radius: 12px;
 }
 
+.bio-form > .file-area.active {
+    border-color: #8E43ED;
+}
+
 .file-area-container > span {
     margin-right: 8px;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #9993BD;
+}
+
+.bio-form input[type="file"] {
+    display: none;
 }
 
 .file-area-container > button {
@@ -271,6 +279,7 @@ header {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    cursor: pointer;
 }
 
 .bio-form > .file-container {
@@ -328,6 +337,7 @@ header {
 }
 
 .file .remove-button {
+    cursor: pointer;
     margin-left: auto;
 }
 
