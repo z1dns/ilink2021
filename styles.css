@@ -178,9 +178,10 @@ header {
     color: #333333;
 }
 
-.input-fields > div > input:required {
+.input-fields > div > input:required,
+.input-fields > div > select:required {
     appearance: none;
-    height: 56px;
+    min-height: 56px;
     padding: 16px;
     border-radius: 12px;
     margin-bottom: 4px;
@@ -192,17 +193,20 @@ header {
     line-height: 24px;
 }
 
-.input-fields > div > input:invalid {
+.input-fields > div > input:invalid,
+.input-fields > div > select:invalid {
     background: #FFF5F5;
     border: 1px solid #ED4376;
 }
 
-.input-fields > div > input:focus {
+.input-fields > div > input:focus,
+.input-fields > div > select:focus {
     border: 1px solid #8E43ED;
     outline: none;
 }
 
-.input-fields > div > input::placeholder {
+.input-fields > div > input::placeholder,
+.input-fields > div > select:placeholder {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -353,23 +357,24 @@ header {
     color: white;
 }
 
-.bio-form > .submit > button:disabled {
+.bio-form > .submit > button.inactive {
     background-color: #DED9E4;
 }
 
-.bio-form > .submit > button:enabled {
+.bio-form > .submit > button.active {
     background-color: #8E43ED;
 }
 
-.bio-form > .submit > button:enabled:hover {
+.bio-form > .submit > button.active:hover {
     background-color: #6813D3;
 }
 
-.bio-form > .submit > button:enabled:active {
+.bio-form > .submit > button.active:active {
     background-color: #500AA9;
 }
 
 .form-completed {
+    visibility: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;    
