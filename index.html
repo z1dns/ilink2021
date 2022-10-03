@@ -15,9 +15,9 @@
                 <img class="logo" src="images/logo.png" alt="logo" width="116px" height="44px">
                 <nav>
                     <ul class="menu">
-                        <li><a href="#">Jane Doe</a></li>
-                        <li><a href="#">Tell us about yourself</a></li>
-                        <li><a href="#">Slider</a></li>
+                        <li><a href="#bio-header">Jane Doe</a></li>
+                        <li><a href="#bio-form">Tell us about yourself</a></li>
+                        <li><a href="#carousel">Slider</a></li>
                     </ul>
                 </nav>    
             </div>
@@ -27,7 +27,7 @@
                 <div class="bio-container">
                     <img src="images/avatar.png" alt="avatar" width="528px" height="600px">
                     <div class="person-info">
-                        <h1>Jane Doe</h1>
+                        <h1 id="bio-header">Jane Doe</h1>
                         <ul>
                             <li class="info-item"><span>Date of birth</span> 21.04.2001</li>
                             <li class="info-item"><span>Gender</span> Female</li>
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <form class="bio-form" action="" method="post" enctype="multipart/form-data" novalidate>
+            <form id="bio-form" class="bio-form" action="" method="post" enctype="multipart/form-data" novalidate>
                 <h2>Tell us about yourself</h2>
                 <div class="input-fields">
                     <div class="name-field">
@@ -93,7 +93,7 @@
                 </div>
             </form>
 
-            <div class="carousel">
+            <div id="carousel" class="carousel">
                 <div class="picture-viewport">
                     <div class="picture">
                         <h2>Slide this photo</h2>
