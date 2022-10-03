@@ -93,7 +93,42 @@
                 </div>
             </form>
 
-            <div class="gallery"></div>
+            <div class="carousel">
+                <div class="picture-viewport">
+                    <div class="picture">
+                        <h2>Slide this photo</h2>
+                        <div class="text-wrapper">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                        <img src="images/carousel/img-1.png" alt="picture-1" width="1312px" height="535px">
+                    </div>
+                    <div class="picture">
+                        <h2>Slide this photo</h2>
+                        <div class="text-wrapper">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                        <img src="images/carousel/img-2.png" alt="picture-1" width="1312px" height="535px">
+                    </div>
+                    <div class="picture">
+                        <h2>Slide this photo</h2>
+                        <div class="text-wrapper">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                        <img src="images/carousel/img-3.png" alt="picture-1" width="1312px" height="535px">
+                    </div>
+
+                    <a class="previous button">&lt;</a>
+                    <a class="next button">&gt;</a>
+
+                    <div class="navigation-wrapper">
+                        <ul class="navigation">
+                            <li class="dot" data-idx="0"></li>
+                            <li class="dot" data-idx="1"></li>
+                            <li class="dot" data-idx="2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <template id="file-template">
                 <div class="file">
@@ -110,6 +145,7 @@
 
             <script src="scripts/file_upload.js"></script>
             <script src="scripts/form_validation.js"></script>
+            <script src="scripts/carousel.js"></script>
         </main>
     </body>
 </html>

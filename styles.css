@@ -393,7 +393,130 @@ header {
     color: #303030;
 }
 
-.gallery {
+.carousel {
+    position: relative;
     height: 647px;
     background-color: white;
+    padding: 56px 64px;
+}
+
+.carousel > .picture-viewport {
+    width: 1312px;
+    height: 535px;
+    padding: 0;
+    position: relative;
+    border-radius: 32px;
+}
+
+.carousel > .picture-viewport > .picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.carousel .picture > h2 {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 197px;
+    font-family: Montserrat;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.carousel .picture .text-wrapper {
+    position: absolute;
+    top: 285px;
+    width: 100%;
+}
+
+.carousel .picture p {
+    margin: 0 auto;
+    display: block;
+    width: 580px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.carousel .picture > img {
+    border-radius: 32px;
+}
+
+.carousel .navigation-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.carousel .navigation > .dot {
+    margin: 0;
+    padding: 0;
+    margin-right: 12px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.carousel .navigation > .dot:last-child {
+    margin-right: 0px;
+}
+
+.carousel .navigation > .dot.active {
+    background-color: #FFFFFF;
+}
+
+.carousel .button {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin: 0;
+  margin-top: -24px;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: bold;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.carousel .button:hover {
+    color: #F8F3FF;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel .button.previous {
+    left: 0;
+    padding-left: 32px;
+    border-radius: 0 7px 7px 0;
+}
+
+.carousel .button.next {
+    right: 0;
+    padding-right: 32px;
+    border-radius: 7px 0 0 7px;
 }
