@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 html {
@@ -7,103 +9,189 @@ html {
 }
 
 body {
+    width: 100%;
     margin: 0 auto;
-    width: 1440px;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        max-width: 1440px;
+    }
 }
 
 main {
+    width: 100%;
     background-color: #F8F3FF;
 }
 
 header {
-    height: 96px;
+    width: 100%;
+    height: 64px;
     background-color: #F8F3FF;
-    padding-left: 64px;
-    padding-right: 176px;
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        height: 96px;
+        padding-left: 64px;
+        padding-right: 176px;
+    }
 }
 
 .header-container {
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+    .header-container {
+        justify-content: space-between;
+    }
 }
 
 .menu {
-    width: 359px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+    display: none;
 }
 
-.menu > li {
-    list-style: none;
-}
+@media screen and (min-width: 800px) {
+    .menu {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
 
-.menu > li > a {
-    text-decoration: none;
-    color: #8E43ED;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    .menu > li {
+        list-style: none;
+        margin-right: 32px;
+    }
+
+    .menu > li:last-of-type {
+        margin-right: 0;
+    }
+
+    .menu > li > a {
+        text-decoration: none;
+        color: #8E43ED;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 .bio-info {
-    height: 800px;
+    width: 100%;
     position: relative;
     background-color: white;
-    border-top-left-radius: 337px 259px;
-    border-bottom-right-radius: 337px 259px;
-    padding: 100px 176px 100px 64px;
+    padding: 24px 13px 58px 14px;
 }
 
-.bio-info::after {
-    content: "";
-    display: block;
-    width: 170px;
-    height: 250px;
-    position: absolute;
-    bottom: 45px;
-    left: 0;
-    background: url("images/person-icon.png") no-repeat;
-    z-index: 1;
+@media screen and (min-width: 800px) {
+    .bio-info {
+        justify-content: space-between;
+        border-top-left-radius: 337px 259px;
+        border-bottom-right-radius: 337px 259px;
+        padding: 100px 176px 100px 64px;
+    }
 }
 
 .bio-container {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.bio-container > img {
-    width: 528px;
-    height: 600px;
-    border-radius: 32px;
+@media screen and (min-width: 800px) {
+    .bio-container {
+        flex-direction: row;
+    }
+}
+
+.bio-container > .avatar-container {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container  > .avatar-container {
+        align-self: start;
+        margin: 0;
+        margin-right: 32px;
+    }
+}
+
+.bio-container > .avatar-container > img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container  > .avatar-container > img {
+        border-radius: 32px;
+    }
+}
+
+.bio-container  > .avatar-container::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 117px;
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+    left: auto;
+    background: url("images/person-icon-mobile.png") no-repeat;
+    z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container > .avatar-container::after {
+        width: 170px;
+        height: 250px;
+        right: auto;
+        bottom: -55px;
+        left: -64px;
+        background: url("images/person-icon-desktop.png") no-repeat;
+    }
 }
 
 .person-info {
-    width: 640px;
-    height: 512px;
+    width: 100%;
 }
 
 .person-info > h1 {
+    font-size: 40px;
     font-weight: 800;
-    font-size: 56px;
-    line-height: 72px;
+    line-height: 48px;
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     color: #303030;
 }
 
+@media screen and (min-width: 800px) {
+    .person-info > h1 {
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 72px;
+        margin-bottom: 24px;
+    }
+}
+
 .person-info > ul {
+    width: 100%;
     margin: 0;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
     padding: 0;
     display: flex;
     flex-direction: row;
@@ -112,54 +200,115 @@ header {
     line-height: 21px;
 }
 
+@media screen and (min-width: 800px) {
+    .person-info > ul {
+        margin-bottom: 64px;
+    }
+}
+
 .info-item {
     list-style: none;
-    margin-right: 32px;
+    margin-right: 39px;
     color: #303030;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .info-item {
+        margin-right: 32px;
+        flex-direction: row;
+    }
+}
+
+.info-item:last-child {
+    margin-right: 0;
 }
 
 .info-item > span {
     color: #8E43ED;
 }
 
+.info-item > span.item-name {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.info-item > span.item-name {
+    margin: 0;
+    margin-right: 8px;
+}
+
 .person-info > h3 {
     margin: 0;
-    margin-bottom: 24px;
-    font-weight: 800;
-    font-size: 27px;
-    line-height: 36px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 24px;
     color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+    .person-info > h3 {
+        margin-bottom: 24px;
+        font-size: 27px;
+        line-height: 36px;
+    }
 }
 
 .person-info p {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+@media screen and (min-width: 800px) {
+    .person-info p {
+        font-size: 18px;
+        line-height: 32px;
+    }
 }
 
 .bio-form {
-    height: 750px;
-    padding-top: 56px;
-    padding-left: 64px;
-    background: url("images/form-background-1.png") no-repeat 0 72px,
-                url("images/form-background-2.png") no-repeat right 47px;
+    width: 100%;
+    padding: 40px 14px 48px 14px;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form {
+        padding: 56px 64px 48px 64px;
+        background: url("images/form-background-1.png") no-repeat 0 72px,
+                    url("images/form-background-2.png") no-repeat right 47px;
+    }
 }
 
 .bio-form > h2 {
     margin: 0;
     margin-bottom: 40px;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 72px;
+    font-size: 32px;
+    line-height: 41px;
     color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > h2 {
+        font-size: 40px;
+        line-height: 72px;
+    }
 }
 
 .input-fields {
     margin-bottom: 56px;
     display: grid;
-    grid-template-columns: 304px 304px 304px;
+    grid-template-columns: 1fr;
     row-gap: 40px;
     column-gap: 32px;
+}
+
+@media screen and (min-width: 800px) {
+    .input-fields {
+        grid-template-columns: minmax(100px, 304px) minmax(100px, 304px) minmax(100px, 304px);
+    }
 }
 
 .input-fields > div {
@@ -169,6 +318,16 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.input-fields > div.blank {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .input-fields > div.blank {
+        display: block;
+    }
 }
 
 .input-fields > div > label {
@@ -182,6 +341,7 @@ header {
 .input-fields > div > select:required {
     appearance: none;
     min-height: 56px;
+    width: 100%;
     padding: 16px;
     border-radius: 12px;
     margin-bottom: 4px;
@@ -223,12 +383,13 @@ header {
 }
 
 .bio-form > .file-area {
+    margin: 0 auto;
     margin-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 976px;
-    height: 104px;
+    width: 100%;
+    height: 175px;
     background: white;
     border: 1px dashed #D9BBFF;
     border-radius: 12px;
@@ -238,12 +399,31 @@ header {
     border-color: #8E43ED;
 }
 
-.file-area-container > span {
-    margin-right: 8px;
+.bio-form .file-area-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form .file-area-container {
+        flex-direction: row;
+    }
+}
+
+ .bio-form .file-area-container > span {
+    margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #9993BD;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form .file-area-container > span {
+        margin: 0;
+        margin-right: 8px;
+    }
 }
 
 .bio-form input[type="file"] {
@@ -287,17 +467,23 @@ header {
 }
 
 .bio-form > .file-container {
-    margin-bottom: 48px;
-    width: 976px;
-    height: 56px;
-    display: flex;
-    flex-direction: row;
+    margin-bottom: 40px;
+    width: 100%;
+    min-height: 56px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > .file-container {
+        margin-bottom: 48px;
+        grid-template-columns: minmax(auto, 256px) minmax(auto, 256px) minmax(auto, 256px);
+        gap: 0 8px;
+    }
 }
 
 .bio-form > .file-container > .file {
-    width: 256px;
-    height: 100%;
-    margin-right: 8px;
     padding: 8px 24px 8px 12px;
     background: #FFFFFF;
     border: 1px solid #D9BBFF;
@@ -346,15 +532,30 @@ header {
 }
 
 .bio-form > .submit {
-    height: 48px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > .submit {
+        flex-direction: row;
+     }
 }
 
 .bio-form > .submit > button {
-    margin-right: 24px;
+    width: 100%;
+    margin: 0;
+    margin-top: 24px;
     background-color: #8E43ED;
     color: white;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > .submit > button {
+        width: 211px;
+        margin: 0;
+        margin-right: 24px;
+     }
 }
 
 .bio-form > .submit > button.inactive {
@@ -373,11 +574,18 @@ header {
     background-color: #500AA9;
 }
 
-.form-completed {
+.bio-form .form-completed {
+    margin: 0 auto;
     visibility: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;    
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form .form-completed {
+        margin: 0;
+     }
 }
 
 .form-completed > img {
@@ -394,21 +602,30 @@ header {
 }
 
 .carousel {
+    width: 100%;
     position: relative;
-    height: 647px;
     background-color: white;
-    padding: 56px 64px;
+    padding: 14px 32px;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel {
+        padding: 56px 64px;
+     }
 }
 
 .carousel > .picture-viewport {
-    width: 1312px;
+    width: 100%;
+    height: 100%;
     height: 535px;
     padding: 0;
     position: relative;
-    border-radius: 32px;
 }
 
+
 .carousel > .picture-viewport > .picture {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -419,35 +636,67 @@ header {
     margin: 0;
     position: absolute;
     width: 100%;
-    top: 197px;
-    font-family: Montserrat;
-    font-size: 56px;
+    top: 170px;
+    font-size: 40px;
     font-weight: 800;
-    line-height: 72px;
+    line-height: 48px;
     text-align: center;
     color: #FFFFFF;
 }
 
+@media screen and (min-width: 800px) {
+    .carousel .picture > h2 {
+        top: 197px;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 72px;
+    }
+}
+
 .carousel .picture .text-wrapper {
     position: absolute;
-    top: 285px;
+    top: 282px;
     width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel .picture .text-wrapper {
+        top: 285px;
+    }
 }
 
 .carousel .picture p {
     margin: 0 auto;
     display: block;
-    width: 580px;
+    max-width: 254px;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 24px;
     text-align: center;
     color: #FFFFFF;
 }
 
+
+@media screen and (min-width: 800px) {
+    .carousel .picture p {
+        max-width: 580px;
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
 .carousel .picture > img {
-    border-radius: 32px;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel {
+        border-radius: 32px;
+     }
 }
 
 .carousel .navigation-wrapper {
@@ -455,9 +704,15 @@ header {
     padding: 0;
     width: 100%;
     position: absolute;
-    bottom: 32px;
+    bottom: 43px;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel .navigation-wrapper {
+        bottom: 32px;
+     }
 }
 
 .carousel .navigation {
@@ -491,17 +746,25 @@ header {
 }
 
 .carousel .button {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin: 0;
-  margin-top: -24px;
-  padding: 5px;
-  color: #FFFFFF;
-  font-size: 48px;
-  font-weight: bold;
-  transition: background-color 0.4s ease;
-  cursor: pointer;
+    position: absolute;
+    top: auto;
+    bottom: 16px;
+    width: auto;
+    margin: 0;
+    padding: 5px;
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel .button {
+        top: 50%;
+        bottom: auto;
+        margin-top: -32px;
+     }
 }
 
 .carousel .button:hover {
