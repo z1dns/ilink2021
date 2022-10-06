@@ -6,8 +6,8 @@
 @media screen and (min-width: 800px) {
     .bio-form {
         padding: 56px 64px 48px 64px;
-        background: url("images/form-background-1.png") no-repeat 0 72px,
-                    url("images/form-background-2.png") no-repeat right 47px;
+        background: url("../images/form-background-1.png") no-repeat 0 72px,
+                    url("../images/form-background-2.png") no-repeat right 47px;
     }
 }
 
