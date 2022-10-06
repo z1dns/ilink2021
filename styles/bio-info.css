@@ -1,0 +1,184 @@
+.bio-info {
+    width: 100%;
+    position: relative;
+    background-color: white;
+    padding: 24px 13px 58px 14px;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-info {
+        justify-content: space-between;
+        border-top-left-radius: 337px 259px;
+        border-bottom-right-radius: 337px 259px;
+        padding: 100px 176px 100px 64px;
+    }
+}
+
+.bio-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container {
+        flex-direction: row;
+    }
+}
+
+.bio-container > .avatar-container {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container  > .avatar-container {
+        align-self: start;
+        margin: 0;
+        margin-right: 32px;
+    }
+}
+
+.bio-container > .avatar-container > img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container  > .avatar-container > img {
+        border-radius: 32px;
+    }
+}
+
+.bio-container  > .avatar-container::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 117px;
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+    left: auto;
+    background: url("images/person-icon-mobile.png") no-repeat;
+    z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-container > .avatar-container::after {
+        width: 170px;
+        height: 250px;
+        right: auto;
+        bottom: -55px;
+        left: -64px;
+        background: url("images/person-icon-desktop.png") no-repeat;
+    }
+}
+
+.person-info {
+    width: 100%;
+}
+
+.person-info > h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    margin: 0;
+    margin-bottom: 16px;
+    color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+    .person-info > h1 {
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 72px;
+        margin-bottom: 24px;
+    }
+}
+
+.person-info > ul {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 32px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+@media screen and (min-width: 800px) {
+    .person-info > ul {
+        margin-bottom: 64px;
+    }
+}
+
+.info-item {
+    list-style: none;
+    margin-right: 39px;
+    color: #303030;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .info-item {
+        margin-right: 32px;
+        flex-direction: row;
+    }
+}
+
+.info-item:last-child {
+    margin-right: 0;
+}
+
+.info-item > span {
+    color: #8E43ED;
+}
+
+.info-item > span.item-name {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.info-item > span.item-name {
+    margin: 0;
+    margin-right: 8px;
+}
+
+.person-info > h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+    .person-info > h3 {
+        margin-bottom: 24px;
+        font-size: 27px;
+        line-height: 36px;
+    }
+}
+
+.person-info p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+@media screen and (min-width: 800px) {
+    .person-info p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}

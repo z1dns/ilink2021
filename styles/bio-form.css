@@ -1,0 +1,333 @@
+.bio-form {
+    width: 100%;
+    padding: 40px 14px 48px 14px;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form {
+        padding: 56px 64px 48px 64px;
+        background: url("images/form-background-1.png") no-repeat 0 72px,
+                    url("images/form-background-2.png") no-repeat right 47px;
+    }
+}
+
+.bio-form > h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 41px;
+    color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > h2 {
+        font-size: 40px;
+        line-height: 72px;
+    }
+}
+
+.input-fields {
+    margin-bottom: 56px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    column-gap: 32px;
+}
+
+@media screen and (min-width: 800px) {
+    .input-fields {
+        grid-template-columns: minmax(100px, 304px) minmax(100px, 304px) minmax(100px, 304px);
+    }
+}
+
+.input-fields > div {
+    margin: 0;
+    padding: 0;
+    height: 83px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-fields > div.blank {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .input-fields > div.blank {
+        display: block;
+    }
+}
+
+.input-fields > div > label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.input-fields > div > input:required,
+.input-fields > div > select:required {
+    appearance: none;
+    min-height: 56px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+    border: 1px solid #D9BBFF;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.input-fields > div > input:invalid,
+.input-fields > div > select:invalid {
+    background: #FFF5F5;
+    border: 1px solid #ED4376;
+}
+
+.input-fields > div > input:focus,
+.input-fields > div > select:focus {
+    border: 1px solid #8E43ED;
+    outline: none;
+}
+
+.input-fields > div > input::placeholder,
+.input-fields > div > select:placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9F9F9F;
+}
+
+.input-fields > div > .error {
+    margin-left: 8px;
+    color: #ED4376;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.bio-form > .file-area {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 175px;
+    background: white;
+    border: 1px dashed #D9BBFF;
+    border-radius: 12px;
+}
+
+.bio-form > .file-area.active {
+    border-color: #8E43ED;
+}
+
+.bio-form .file-area-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form .file-area-container {
+        flex-direction: row;
+    }
+}
+
+ .bio-form .file-area-container > span {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #9993BD;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form .file-area-container > span {
+        margin: 0;
+        margin-right: 8px;
+    }
+}
+
+.bio-form input[type="file"] {
+    display: none;
+}
+
+.file-area-container > button {
+    background: white;
+    border: 1px solid #8E43ED;
+    color: #8E43ED;
+}
+
+.file-area-container > button:disabled {
+    color: #D9BBFF;
+    background: #FFFFFF;
+    border: 1px solid #D9BBFF;
+}
+
+.file-area-container > button:enabled {
+    background: white;
+}
+
+.file-area-container > button:enabled:hover {
+    background-color: #FAF8FE;
+}
+
+.file-area-container > button:enabled:active {
+    background-color: #F0E5FE;
+}
+
+.bio-form button {
+    appearance: none;
+    width: 211px;
+    height: 56px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bio-form > .file-container {
+    margin-bottom: 40px;
+    width: 100%;
+    min-height: 56px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > .file-container {
+        margin-bottom: 48px;
+        grid-template-columns: minmax(auto, 256px) minmax(auto, 256px) minmax(auto, 256px);
+        gap: 0 8px;
+    }
+}
+
+.bio-form > .file-container > .file {
+    padding: 8px 24px 8px 12px;
+    background: #FFFFFF;
+    border: 1px solid #D9BBFF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.file > div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.file .preview {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.file .info  {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.file .info > .name  {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #303030;
+}
+
+
+.file .info > .format-and-size {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #AFAFAF;
+}
+
+.file .remove-button {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.bio-form > .submit {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > .submit {
+        flex-direction: row;
+     }
+}
+
+.bio-form > .submit > button {
+    width: 100%;
+    margin: 0;
+    margin-top: 24px;
+    background-color: #8E43ED;
+    color: white;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form > .submit > button {
+        width: 211px;
+        margin: 0;
+        margin-right: 24px;
+     }
+}
+
+.bio-form > .submit > button.inactive {
+    background-color: #DED9E4;
+}
+
+.bio-form > .submit > button.active {
+    background-color: #8E43ED;
+}
+
+.bio-form > .submit > button.active:hover {
+    background-color: #6813D3;
+}
+
+.bio-form > .submit > button.active:active {
+    background-color: #500AA9;
+}
+
+.bio-form .form-completed {
+    margin: 0 auto;
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bio-form .form-completed {
+        margin: 0;
+     }
+}
+
+.form-completed > img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.form-completed > span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303030;
+}
